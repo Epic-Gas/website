@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #home {
+    background-color: black;
+  }
+
+  #events {
+    background-color: black;
+  }
+
+  #home_background {
+    background: url(images/backgrounds/smoke-2.gif) no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #merch {
+    background: url(images/backgrounds/smoke_1.gif) no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
