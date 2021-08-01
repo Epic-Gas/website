@@ -19,8 +19,8 @@ strain_next.addEventListener("click", (e) => {
   }
 
   if (visable_strains === 1) {
-    current_strain = strains[i];
-    next_strain = strains[i + 1];
+    current_strain = strains[visable_strain_indices];
+    next_strain = strains[parseInt(visable_strain_indices) + 1];
     if (next_strain !== undefined) {
       current_strain.classList.remove("flex");
       current_strain.classList.add("hidden");
@@ -28,6 +28,7 @@ strain_next.addEventListener("click", (e) => {
       next_strain.classList.remove("hidden");
     }
   } else {
+    console.log(">1");
     first_strain = strains[visable_strain_indices[0]];
     last_strain = strains[visable_strain_indices[visable_strains - 1]];
     next_strain =
@@ -55,8 +56,8 @@ strain_back.addEventListener("click", (e) => {
   }
 
   if (visable_strains === 1) {
-    current_strain = strains[i];
-    previous_strain = strains[i - 1];
+    current_strain = strains[visable_strain_indices];
+    previous_strain = strains[parseInt(visable_strain_indices) - 1];
     if (previous_strain !== undefined) {
       current_strain.classList.remove("flex");
       current_strain.classList.add("hidden");
